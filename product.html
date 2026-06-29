@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | Veloce Store</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    /* Zoom effect style */
+    .img-zoom-container {
+      position: relative;
+      overflow: hidden;
+      cursor: zoom-in;
+      border-radius: var(--border-radius-md);
+      background-color: var(--bg-tertiary);
+    }
+    .img-zoom-container img {
+      transition: transform 0.1s ease-out;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      aspect-ratio: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        Veloce<span class="logo-dot"></span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="categories.html">Categories</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          <input type="text" id="header-search" placeholder="Search products...">
+        </div>
+        <button id="theme-toggle" class="action-btn"></button>
+        <a href="wishlist.html" class="action-btn">
+          <svg style="width:20px;height:20px;fill:currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/></svg>
+          <span class="badge wishlist-count-badge">0</span>
+        </a>
+        <a href="cart.html" class="action-btn">
+          <svg style="width:20px;height:20px;fill:currentColor" viewBox="0 0 20 20"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 100-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/></svg>
+          <span class="badge cart-count-badge">0</span>
+        </a>
+        <a href="login.html" id="auth-nav-user" class="action-btn">
+          <svg style="width:20px;height:20px;fill:currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/></svg>
+        </a>
+        <button class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Product Container Section -->
+  <section class="section-padding">
+    <div class="container" id="product-details-root">
+      <!-- Generated via JS -->
+    </div>
+  </section>
+
+  <!-- Recommendations & Similar Products -->
+  <section class="section-padding" style="background:var(--bg-secondary); border-top:1px solid var(--border-color);">
+    <div class="container">
+      <h2 style="font-size:1.8rem; margin-bottom:2rem;">Similar Products You May Like</h2>
+      <div id="similar-products-grid" class="product-grid">
+        <!-- Dyn pop -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="margin-bottom: 1rem; display:inline-flex;">Veloce<span class="logo-dot"></span></a>
+        <p>Premium aesthetics, high performance. Curating the best designer essentials for modern workspaces and daily commutes.</p>
+        <div class="social-links">
+          <a href="https://x.com/Muhammadis1n" target="_blank" aria-label="Twitter">TW</a>
+          <a href="https://www.instagram.com/mohammad_islam_awan?igsh=NGdhZzBteTlyemh0" target="_blank" aria-label="Instagram">IG</a>
+          <a href="https://www.linkedin.com/in/muhammad-islam-a50952399" target="_blank" aria-label="LinkedIn">LN</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="shop.html">All Products</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="shop.html?filter=trending">Trending</a></li>
+          <li><a href="shop.html?filter=new">New Arrivals</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="faq.html">FAQ Helpdesk</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About Veloce</a></li>
+          <li><a href="404.html">Press Room</a></li>
+          <li><a href="about.html">Sustainability</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; 2026 Veloce Inc. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="faq.html">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">↑</button>
+
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      renderProductDetails();
+    });
+
+    function renderProductDetails() {
+      const params = new URLSearchParams(window.location.search);
+      const productId = params.get("id") || "p1"; // Default to p1 if missing
+      const product = window.products.find(p => p.id === productId);
+      const root = document.getElementById("product-details-root");
+
+      if (!product) {
+        root.innerHTML = `
+          <div style="text-align:center; padding:5rem 2rem;">
+            <h2>Product Not Found</h2>
+            <p style="color:var(--text-muted); margin: 1rem 0 2rem;">The product you are trying to view does not exist.</p>
+            <a href="shop.html" class="btn btn-primary">Return to Shop</a>
+          </div>
+        `;
+        return;
+      }
+
+      // Tab logic variables
+      const wishlist = window.getWishlist();
+      const isWish = wishlist.includes(product.id);
+      const hasDiscount = product.originalPrice && product.originalPrice > product.price;
+
+      root.innerHTML = `
+        <div style="display:grid; grid-template-columns: 1.1fr 1fr; gap:4rem; align-items:start; flex-wrap:wrap;">
+          
+          <!-- Image Gallery and Zoom -->
+          <div>
+            <div class="img-zoom-container glass-card" id="zoom-box">
+              <img id="main-product-img" src="${product.image}" alt="${product.name}">
+            </div>
+            
+            <div style="display:flex; gap:1rem; margin-top:1rem;">
+              ${product.images.map((img, i) => `
+                <div class="glass-card" style="border-radius:var(--border-radius-sm); overflow:hidden; width:80px; height:80px; cursor:pointer;" onclick="swapGalleryImage('${img}')">
+                  <img src="${img}" alt="Thumbnail ${i+1}" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+              `).join("")}
+            </div>
+          </div>
+
+          <!-- Product Details Section -->
+          <div>
+            <span style="font-size:0.8rem; text-transform:uppercase; color:var(--text-muted); font-weight:700; letter-spacing:0.05em;">${product.category}</span>
+            <h1 style="font-size:2.8rem; margin:0.5rem 0 1rem; line-height:1.2;">${product.name}</h1>
+            
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:1.5rem; color:#fbbf24;">
+              ${"★".repeat(Math.round(product.rating))}${"☆".repeat(5 - Math.round(product.rating))}
+              <span style="color:var(--text-muted); font-size:0.85rem; font-weight:600;">(${product.reviewsCount} verified customers reviews)</span>
+            </div>
+
+            <div style="display:flex; align-items:baseline; gap:1rem; margin-bottom:2rem;">
+              <span style="font-size:2.2rem; font-weight:800;">$${product.price}</span>
+              ${hasDiscount ? `<span style="text-decoration:line-through; color:var(--text-muted); font-size:1.3rem;">$${product.originalPrice}</span>` : ""}
+            </div>
+
+            <p style="color:var(--text-secondary); margin-bottom:2rem; font-size:1.05rem; line-height:1.7;">${product.description}</p>
+
+            <!-- Quantity select row -->
+            <div style="display:flex; align-items:center; gap:1.5rem; margin-bottom:2.5rem; flex-wrap:wrap;">
+              <div style="display:flex; align-items:center; border:1px solid var(--border-color); border-radius:var(--border-radius-sm); background:var(--bg-tertiary); overflow:hidden; width:130px; height:45px;">
+                <button onclick="decrementQty()" style="border:none; background:none; flex:1; height:100%; cursor:pointer; font-weight:700;">-</button>
+                <input type="number" id="detail-qty" value="1" min="1" style="border:none; background:none; width:45px; text-align:center; font-weight:700; color:var(--text-primary);">
+                <button onclick="incrementQty()" style="border:none; background:none; flex:1; height:100%; cursor:pointer; font-weight:700;">+</button>
+              </div>
+              
+              <button class="btn btn-primary" onclick="triggerAddToCart('${product.id}')" style="height:45px; padding:0 2.5rem;">Add to Cart</button>
+              <button class="btn btn-outline" onclick="triggerBuyNow('${product.id}')" style="height:45px; padding:0 2rem;">Buy Now</button>
+            </div>
+
+            <!-- Tabs specs and reviews -->
+            <div class="glass-card" style="padding:2rem;">
+              <div style="display:flex; border-bottom:1px solid var(--border-color); margin-bottom:1.5rem; gap:1.5rem;">
+                <button onclick="toggleDetailsTab('specs')" id="tab-specs-btn" style="border:none; background:none; padding-bottom:0.8rem; cursor:pointer; font-weight:700; border-bottom:2px solid var(--primary-color); color:var(--text-primary);">Specifications</button>
+                <button onclick="toggleDetailsTab('reviews')" id="tab-reviews-btn" style="border:none; background:none; padding-bottom:0.8rem; cursor:pointer; font-weight:700; border-bottom:2px solid transparent; color:var(--text-muted);">Reviews (${product.reviews.length})</button>
+              </div>
+
+              <!-- Specs contents -->
+              <div id="details-specs-content">
+                <table style="width:100%; border-collapse:collapse; font-size:0.95rem;">
+                  <tbody>
+                    ${Object.entries(product.specs).map(([key, val]) => `
+                      <tr style="border-bottom:1px solid var(--border-color);">
+                        <td style="padding:0.8rem 0; font-weight:600; color:var(--text-secondary); width:40%;">${key}</td>
+                        <td style="padding:0.8rem 0; color:var(--text-primary);">${val}</td>
+                      </tr>
+                    `).join("")}
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Reviews contents -->
+              <div id="details-reviews-content" style="display:none;">
+                <div style="display:flex; flex-direction:column; gap:1.5rem;" id="reviews-list-container">
+                  ${product.reviews.map(rev => `
+                    <div style="border-bottom:1px solid var(--border-color); padding-bottom:1rem;">
+                      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.3rem;">
+                        <span style="font-weight:700;">${rev.user}</span>
+                        <span style="font-size:0.8rem; color:var(--text-muted);">${rev.date}</span>
+                      </div>
+                      <div style="color:#fbbf24; font-size:0.8rem; margin-bottom:0.5rem;">
+                        ${"★".repeat(rev.rating)}${"☆".repeat(5 - rev.rating)}
+                      </div>
+                      <p style="color:var(--text-secondary); font-size:0.9rem;">${rev.comment}</p>
+                    </div>
+                  `).join("")}
+                </div>
+
+                <!-- Add Review block -->
+                <form id="add-review-form" onsubmit="event.preventDefault(); triggerAddReview('${product.id}')" style="margin-top:2rem; display:flex; flex-direction:column; gap:1rem;">
+                  <h4 style="font-size:1rem; font-weight:700;">Leave a Review</h4>
+                  <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+                    <input type="text" id="review-username" placeholder="Your Name" required style="padding:0.6rem 1rem; border-radius:var(--border-radius-sm); border:1px solid var(--border-color); background:var(--bg-secondary); color:var(--text-primary);">
+                    <select id="review-stars" style="padding:0.6rem 1rem; border-radius:var(--border-radius-sm); border:1px solid var(--border-color); background:var(--bg-secondary); color:var(--text-primary);">
+                      <option value="5">5 Stars</option>
+                      <option value="4">4 Stars</option>
+                      <option value="3">3 Stars</option>
+                      <option value="2">2 Stars</option>
+                      <option value="1">1 Star</option>
+                    </select>
+                  </div>
+                  <textarea id="review-comment" placeholder="Write your comments..." rows="3" required style="padding:0.8rem 1rem; border-radius:var(--border-radius-sm); border:1px solid var(--border-color); background:var(--bg-secondary); color:var(--text-primary); resize:none;"></textarea>
+                  <button type="submit" class="btn btn-primary" style="align-self:flex-start;">Submit Review</button>
+                </form>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      `;
+
+      initZoomEffect();
+      renderSimilarProducts(product.category, product.id);
+    }
+
+    function swapGalleryImage(imgUrl) {
+      document.getElementById("main-product-img").src = imgUrl;
+    }
+
+    function incrementQty() {
+      const input = document.getElementById("detail-qty");
+      input.value = parseInt(input.value) + 1;
+    }
+
+    function decrementQty() {
+      const input = document.getElementById("detail-qty");
+      if (parseInt(input.value) > 1) {
+        input.value = parseInt(input.value) - 1;
+      }
+    }
+
+    function triggerAddToCart(productId) {
+      const qty = parseInt(document.getElementById("detail-qty").value);
+      window.addToCart(productId, qty);
+    }
+
+    function triggerBuyNow(productId) {
+      const qty = parseInt(document.getElementById("detail-qty").value);
+      window.addToCart(productId, qty, false);
+      window.location.href = "checkout.html";
+    }
+
+    function toggleDetailsTab(tab) {
+      const specsBtn = document.getElementById("tab-specs-btn");
+      const reviewsBtn = document.getElementById("tab-reviews-btn");
+      const specsContent = document.getElementById("details-specs-content");
+      const reviewsContent = document.getElementById("details-reviews-content");
+
+      if (tab === "specs") {
+        specsBtn.style.borderBottomColor = "var(--primary-color)";
+        specsBtn.style.color = "var(--text-primary)";
+        reviewsBtn.style.borderBottomColor = "transparent";
+        reviewsBtn.style.color = "var(--text-muted)";
+        specsContent.style.display = "block";
+        reviewsContent.style.display = "none";
+      } else {
+        reviewsBtn.style.borderBottomColor = "var(--primary-color)";
+        reviewsBtn.style.color = "var(--text-primary)";
+        specsBtn.style.borderBottomColor = "transparent";
+        specsBtn.style.color = "var(--text-muted)";
+        specsContent.style.display = "none";
+        reviewsContent.style.display = "block";
+      }
+    }
+
+    function triggerAddReview(productId) {
+      const username = document.getElementById("review-username").value.trim();
+      const stars = parseInt(document.getElementById("review-stars").value);
+      const comment = document.getElementById("review-comment").value.trim();
+
+      const newReview = { user: username, rating: stars, comment: comment, date: new Date().toISOString().split("T")[0] };
+      
+      const product = window.products.find(p => p.id === productId);
+      if (product) {
+        product.reviews.push(newReview);
+        window.showToast("Review submitted successfully!");
+        
+        // Re-render reviews container list
+        const reviewsContainer = document.getElementById("reviews-list-container");
+        reviewsContainer.innerHTML = product.reviews.map(rev => `
+          <div style="border-bottom:1px solid var(--border-color); padding-bottom:1rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.3rem;">
+              <span style="font-weight:700;">${rev.user}</span>
+              <span style="font-size:0.8rem; color:var(--text-muted);">${rev.date}</span>
+            </div>
+            <div style="color:#fbbf24; font-size:0.8rem; margin-bottom:0.5rem;">
+              ${"★".repeat(rev.rating)}${"☆".repeat(5 - rev.rating)}
+            </div>
+            <p style="color:var(--text-secondary); font-size:0.9rem;">${rev.comment}</p>
+          </div>
+        `).join("");
+
+        document.getElementById("add-review-form").reset();
+      }
+    }
+
+    function initZoomEffect() {
+      const box = document.getElementById("zoom-box");
+      const img = document.getElementById("main-product-img");
+
+      box.addEventListener("mousemove", (e) => {
+        const x = e.clientX - e.target.getBoundingClientRect().left;
+        const y = e.clientY - e.target.getBoundingClientRect().top;
+        img.style.transformOrigin = `${x}px ${y}px`;
+        img.style.transform = "scale(1.8)";
+      });
+
+      box.addEventListener("mouseleave", () => {
+        img.style.transformOrigin = "center center";
+        img.style.transform = "scale(1)";
+      });
+    }
+
+    function renderSimilarProducts(category, excludeId) {
+      const grid = document.getElementById("similar-products-grid");
+      if (!grid) return;
+
+      const wishlist = window.getWishlist();
+      const items = window.products.filter(p => p.category === category && p.id !== excludeId).slice(0, 4);
+
+      if (items.length === 0) {
+        grid.innerHTML = `<p style="color:var(--text-muted);">No similar recommendations found.</p>`;
+        return;
+      }
+
+      grid.innerHTML = items.map(product => {
+        const isWish = wishlist.includes(product.id);
+        return `
+          <div class="glass-card product-card">
+            <div class="product-image-wrapper">
+              <img src="${product.image}" alt="${product.name}">
+              <button class="btn-wishlist ${isWish ? "active" : ""}" onclick="window.toggleWishlist('${product.id}')" aria-label="Add to Wishlist">
+                <svg style="width:18px;height:18px;fill:currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/></svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">${product.category}</span>
+              <h3 class="product-name-title"><a href="product.html?id=${product.id}">${product.name}</a></h3>
+              <div class="product-rating">
+                ${"★".repeat(Math.round(product.rating))}${"☆".repeat(5 - Math.round(product.rating))}
+              </div>
+              <div class="product-price-row">
+                <span class="price">$${product.price}</span>
+                <button class="btn-add-cart-card" onclick="window.addToCart('${product.id}', 1)">+</button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+  </script>
+</body>
+</html>

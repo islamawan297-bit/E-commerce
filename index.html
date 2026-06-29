@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veloce | Premium E-Commerce Store</title>
+  <meta name="description" content="Shop premium consumer electronics, wearables, accessories, and modern home essentials at Veloce. Experience glassmorphism aesthetics and premium designs.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        Veloce<span class="logo-dot"></span>
+      </a>
+      
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="categories.html">Categories</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          <input type="text" id="header-search" placeholder="Search products...">
+        </div>
+        
+        <button id="theme-toggle" class="action-btn" aria-label="Toggle Theme"></button>
+
+        <a href="wishlist.html" class="action-btn" aria-label="Wishlist">
+          <svg style="width:20px;height:20px;fill:currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/></svg>
+          <span class="badge wishlist-count-badge">0</span>
+        </a>
+
+        <a href="cart.html" class="action-btn" aria-label="Cart">
+          <svg style="width:20px;height:20px;fill:currentColor" viewBox="0 0 20 20"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 100-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/></svg>
+          <span class="badge cart-count-badge">0</span>
+        </a>
+
+        <a href="login.html" id="auth-nav-user" class="action-btn" aria-label="Account">
+          <svg style="width:20px;height:20px;fill:currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/></svg>
+        </a>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.1)); padding: 6rem 0; position: relative; overflow: hidden;">
+    <div class="container" style="display:grid; grid-template-columns: 1fr 1fr; gap:3rem; align-items:center; min-height:500px; z-index:1; position:relative;">
+      <div>
+        <span style="font-weight: 700; color:var(--primary-color); text-transform: uppercase; letter-spacing: 0.1em; display:block; margin-bottom:1rem;">Premium Collection 2026</span>
+        <h1 style="font-size: 4rem; line-height: 1.1; margin-bottom: 1.5rem;">Acoustics & Style Evolved</h1>
+        <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem; max-width: 500px;">Elevate your lifestyle with next-generation smart accessories designed for pure sound and minimalist efficiency.</p>
+        <div style="display:flex; gap:1rem;">
+          <a href="shop.html" class="btn btn-primary btn-lg">Explore Shop</a>
+          <a href="about.html" class="btn btn-secondary btn-lg">Learn More</a>
+        </div>
+      </div>
+      <div style="position:relative; display:flex; justify-content:center;">
+        <div class="glass-card" style="padding:1.5rem; border-radius:var(--border-radius-lg); position:relative; overflow:hidden;">
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=80" alt="Hero Product" style="border-radius:var(--border-radius-md); max-height:450px; width:100%; object-fit:cover;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category List Quick Grid -->
+  <section class="section-padding">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:3.5rem;">
+        <h2 style="font-size:2.2rem; margin-bottom:0.5rem;">Browse Categories</h2>
+        <p style="color:var(--text-secondary);">Find premium items tailored to your specific needs.</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap:1.5rem;">
+        <a href="shop.html?category=audio" class="glass-card" style="padding:2rem; text-align:center; display:flex; flex-direction:column; align-items:center; gap:1rem; transition:var(--transition);">
+          <div style="width:60px; height:60px; border-radius:50%; background:var(--bg-tertiary); display:flex; align-items:center; justify-content:center; overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=150&q=80" alt="Audio" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <span style="font-weight:700;">Audio</span>
+        </a>
+        <a href="shop.html?category=wearables" class="glass-card" style="padding:2rem; text-align:center; display:flex; flex-direction:column; align-items:center; gap:1rem; transition:var(--transition);">
+          <div style="width:60px; height:60px; border-radius:50%; background:var(--bg-tertiary); display:flex; align-items:center; justify-content:center; overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=150&q=80" alt="Wearables" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <span style="font-weight:700;">Wearables</span>
+        </a>
+        <a href="shop.html?category=bags" class="glass-card" style="padding:2rem; text-align:center; display:flex; flex-direction:column; align-items:center; gap:1rem; transition:var(--transition);">
+          <div style="width:60px; height:60px; border-radius:50%; background:var(--bg-tertiary); display:flex; align-items:center; justify-content:center; overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=150&q=80" alt="Bags" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <span style="font-weight:700;">Bags</span>
+        </a>
+        <a href="shop.html?category=computer" class="glass-card" style="padding:2rem; text-align:center; display:flex; flex-direction:column; align-items:center; gap:1rem; transition:var(--transition);">
+          <div style="width:60px; height:60px; border-radius:50%; background:var(--bg-tertiary); display:flex; align-items:center; justify-content:center; overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=150&q=80" alt="Computers" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <span style="font-weight:700;">Computers</span>
+        </a>
+        <a href="shop.html?category=home" class="glass-card" style="padding:2rem; text-align:center; display:flex; flex-direction:column; align-items:center; gap:1rem; transition:var(--transition);">
+          <div style="width:60px; height:60px; border-radius:50%; background:var(--bg-tertiary); display:flex; align-items:center; justify-content:center; overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=150&q=80" alt="Home" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <span style="font-weight:700;">Home</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section Tabs -->
+  <section class="section-padding" style="background:var(--bg-secondary);">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:3rem; flex-wrap:wrap; gap:1.5rem;">
+        <div>
+          <h2 style="font-size:2.2rem;">Our Products</h2>
+          <p style="color:var(--text-secondary);">Curated choices to elevate your aesthetic and function.</p>
+        </div>
+        <div style="display:flex; gap:0.5rem; background:var(--bg-tertiary); padding:0.4rem; border-radius:50px;" class="glass-card">
+          <button class="btn btn-sm btn-primary filter-tab-btn" data-filter="featured" style="border-radius:50px;">Featured</button>
+          <button class="btn btn-sm btn-outline filter-tab-btn" data-filter="trending" style="border-radius:50px; border:none;">Trending</button>
+          <button class="btn btn-sm btn-outline filter-tab-btn" data-filter="bestseller" style="border-radius:50px; border:none;">Best Sellers</button>
+          <button class="btn btn-sm btn-outline filter-tab-btn" data-filter="new" style="border-radius:50px; border:none;">New Arrivals</button>
+        </div>
+      </div>
+
+      <div class="product-grid" id="home-products-grid">
+        <!-- Products generated dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Flash Sale Countdown Section -->
+  <section class="section-padding" style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.08), rgba(249, 115, 22, 0.08));">
+    <div class="container" style="display:grid; grid-template-columns: 1fr 1.2fr; gap:4rem; align-items:center;">
+      <div>
+        <span style="background: #ef4444; color:white; font-size:0.75rem; font-weight:800; padding:0.4rem 0.8rem; border-radius:50px; text-transform:uppercase; letter-spacing:0.05em; display:inline-block; margin-bottom:1.5rem;">Limited Flash Offer</span>
+        <h2 style="font-size:3rem; line-height:1.2; margin-bottom:1.5rem;">Weekend Megasale is Live!</h2>
+        <p style="color:var(--text-secondary); margin-bottom:2.5rem; font-size:1.1rem;">Unlock massive reductions on premium audio gear. Get free express delivery on all orders above $150.</p>
+        
+        <!-- Countdown boxes -->
+        <div style="display:flex; gap:1rem; margin-bottom:2.5rem;">
+          <div class="glass-card" style="padding:1rem 1.5rem; text-align:center; min-width:80px;">
+            <span id="hours" style="font-size:2rem; font-weight:800; display:block;">18</span>
+            <span style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">Hrs</span>
+          </div>
+          <div class="glass-card" style="padding:1rem 1.5rem; text-align:center; min-width:80px;">
+            <span id="minutes" style="font-size:2rem; font-weight:800; display:block;">42</span>
+            <span style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">Mins</span>
+          </div>
+          <div class="glass-card" style="padding:1rem 1.5rem; text-align:center; min-width:80px;">
+            <span id="seconds" style="font-size:2rem; font-weight:800; display:block;">09</span>
+            <span style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">Secs</span>
+          </div>
+        </div>
+
+        <a href="shop.html?category=audio" class="btn btn-primary btn-lg" style="background:#ef4444;">Claim Discount Now</a>
+      </div>
+      <div>
+        <div class="glass-card" style="padding:1.5rem; border-radius:var(--border-radius-lg); position:relative;">
+          <div class="badge-discount" style="background:#ef4444; z-index:10;">Save $100</div>
+          <img src="https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=700&q=80" alt="Soundbar Offer" style="border-radius:var(--border-radius-md); object-fit:cover; width:100%;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Testimonials -->
+  <section class="section-padding">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:4rem;">
+        <h2 style="font-size:2.2rem; margin-bottom:0.5rem;">What Our Clients Say</h2>
+        <p style="color:var(--text-secondary);">Read verified luxury shopper reviews.</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:2rem;">
+        <div class="glass-card" style="padding:2.5rem; display:flex; flex-direction:column; justify-content:space-between;">
+          <p style="font-style:italic; color:var(--text-secondary); margin-bottom:1.5rem;">"The Spectra Mechanical Keyboard is easily the best product purchase I have made this year. Keystroke feedback is wonderful and it looks incredibly clean on my tabletop."</p>
+          <div style="display:flex; align-items:center; gap:1rem;">
+            <div style="width:45px; height:45px; border-radius:50%; background-color:var(--bg-tertiary); overflow:hidden;">
+              <img src="shoaib.png" alt="Shoaib" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <div>
+              <h4 style="font-size:0.95rem;">Shoaib</h4>
+              <span style="font-size:0.75rem; color:var(--text-muted);">Verified Buyer</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card" style="padding:2.5rem; display:flex; flex-direction:column; justify-content:space-between;">
+          <p style="font-style:italic; color:var(--text-secondary); margin-bottom:1.5rem;">"Excellent design. The leather backpack looks pristine and premium. Highly responsive customer support team when I wanted to change color styles during delivery."</p>
+          <div style="display:flex; align-items:center; gap:1rem;">
+            <div style="width:45px; height:45px; border-radius:50%; background-color:var(--bg-tertiary); overflow:hidden;">
+              <img src="islam.jpg" alt="Islam" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <div>
+              <h4 style="font-size:0.95rem;">Islam</h4>
+              <span style="font-size:0.75rem; color:var(--text-muted);">Tech Entrepreneur</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="container" style="margin-bottom: 5rem;">
+    <div class="glass-card" style="padding:4rem; text-align:center; background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(147, 51, 234, 0.05)); border-radius:var(--border-radius-lg);">
+      <h2 style="font-size:2.2rem; margin-bottom:1rem;">Join the Inner Circle</h2>
+      <p style="color:var(--text-secondary); margin-bottom:2rem; max-width:550px; margin-left:auto; margin-right:auto;">Subscribe to get early notifications of seasonal collections, private discount drops, and product design updates.</p>
+      <form id="newsletter-form" style="display:flex; max-width:500px; margin:0 auto; gap:0.5rem;" onsubmit="event.preventDefault(); window.showToast('Subscribed successfully!'); this.reset();">
+        <input type="email" placeholder="Your premium email address" required style="flex:1; padding:0.8rem 1.5rem; border-radius:var(--border-radius-sm); border:1px solid var(--border-color); background:var(--bg-secondary); color:var(--text-primary);">
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="margin-bottom: 1rem; display:inline-flex;">Veloce<span class="logo-dot"></span></a>
+        <p>Premium aesthetics, high performance. Curating the best designer essentials for modern workspaces and daily commutes.</p>
+        <div class="social-links">
+          <a href="https://x.com/Muhammadis1n" target="_blank" aria-label="Twitter">TW</a>
+          <a href="https://www.instagram.com/mohammad_islam_awan?igsh=NGdhZzBteTlyemh0" target="_blank" aria-label="Instagram">IG</a>
+          <a href="https://www.linkedin.com/in/muhammad-islam-a50952399" target="_blank" aria-label="LinkedIn">LN</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="shop.html">All Products</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="shop.html?filter=trending">Trending</a></li>
+          <li><a href="shop.html?filter=new">New Arrivals</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="faq.html">FAQ Helpdesk</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About Veloce</a></li>
+          <li><a href="404.html">Press Room</a></li>
+          <li><a href="about.html">Sustainability</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; 2026 Veloce Inc. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="faq.html">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">↑</button>
+
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth.js"></script>
+  
+  <script>
+    // Home Page specific logic
+    document.addEventListener("DOMContentLoaded", () => {
+      renderHomeProducts("featured");
+      initCountdown();
+      setupTabButtons();
+    });
+
+    function renderHomeProducts(filterType) {
+      const grid = document.getElementById("home-products-grid");
+      if (!grid) return;
+
+      // Show skeleton loading first
+      grid.innerHTML = Array(4).fill(0).map(() => `
+        <div class="glass-card" style="padding:1rem;">
+          <div class="skeleton skeleton-img"></div>
+          <div class="skeleton skeleton-text" style="width:40%;"></div>
+          <div class="skeleton skeleton-text"></div>
+          <div class="skeleton skeleton-text" style="width:60%;"></div>
+        </div>
+      `).join("");
+
+      // Simulate network latency for beautiful loading experience
+      setTimeout(() => {
+        let filtered = window.products;
+        if (filterType === "featured") filtered = window.products.filter(p => p.featured);
+        if (filterType === "trending") filtered = window.products.filter(p => p.trending);
+        if (filterType === "bestseller") filtered = window.products.filter(p => p.bestSeller);
+        if (filterType === "new") filtered = window.products.filter(p => p.newArrival);
+
+        // Take max 4 for dashboard layout
+        filtered = filtered.slice(0, 4);
+
+        if (filtered.length === 0) {
+          grid.innerHTML = `<p style="grid-column: 1/-1; text-align:center; padding:3rem; color:var(--text-secondary);">No products found in this category.</p>`;
+          return;
+        }
+
+        const wishlist = window.getWishlist();
+
+        grid.innerHTML = filtered.map(product => {
+          const isWish = wishlist.includes(product.id);
+          const hasDiscount = product.originalPrice && product.originalPrice > product.price;
+          const discountPct = hasDiscount ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100) : 0;
+
+          return `
+            <div class="glass-card product-card">
+              <div class="product-image-wrapper">
+                <img src="${product.image}" alt="${product.name}">
+                ${hasDiscount ? `<span class="badge-discount">-${discountPct}%</span>` : ""}
+                ${product.newArrival ? `<span class="badge-tag">New</span>` : ""}
+                <button class="btn-wishlist ${isWish ? "active" : ""}" data-id="${product.id}" onclick="window.toggleWishlist('${product.id}')" aria-label="Add to Wishlist">
+                  <svg style="width:18px;height:18px;fill:currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <span class="product-category">${product.category}</span>
+                <h3 class="product-name-title"><a href="product.html?id=${product.id}">${product.name}</a></h3>
+                <div class="product-rating">
+                  ${"★".repeat(Math.round(product.rating))}${"☆".repeat(5 - Math.round(product.rating))}
+                  <span class="rating-count">(${product.reviewsCount})</span>
+                </div>
+                <div class="product-price-row">
+                  <div class="price-box">
+                    <span class="price">$${product.price}</span>
+                    ${hasDiscount ? `<span class="original-price">$${product.originalPrice}</span>` : ""}
+                  </div>
+                  <div style="display:flex; gap:0.5rem;">
+                    <button class="btn-add-cart-card" onclick="window.openQuickView('${product.id}')" title="Quick View" aria-label="Quick View">
+                      <svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                    </button>
+                    <button class="btn-add-cart-card" onclick="window.addToCart('${product.id}', 1)" title="Add to Cart" aria-label="Add to Cart">
+                      <svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 20 20"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 100-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join("");
+      }, 500);
+    }
+
+    function setupTabButtons() {
+      const buttons = document.querySelectorAll(".filter-tab-btn");
+      buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          buttons.forEach(b => {
+            b.classList.remove("btn-primary");
+            b.classList.add("btn-outline");
+          });
+          btn.classList.remove("btn-outline");
+          btn.classList.add("btn-primary");
+          renderHomeProducts(btn.dataset.filter);
+        });
+      });
+    }
+
+    function initCountdown() {
+      const hoursEl = document.getElementById("hours");
+      const minutesEl = document.getElementById("minutes");
+      const secondsEl = document.getElementById("seconds");
+
+      let totalSeconds = 18 * 3600 + 42 * 60 + 9;
+
+      const timer = setInterval(() => {
+        if (totalSeconds <= 0) {
+          clearInterval(timer);
+          return;
+        }
+        totalSeconds--;
+
+        const hrs = Math.floor(totalSeconds / 3600);
+        const mins = Math.floor((totalSeconds % 3600) / 60);
+        const secs = totalSeconds % 60;
+
+        if (hoursEl) hoursEl.textContent = String(hrs).padStart(2, "0");
+        if (minutesEl) minutesEl.textContent = String(mins).padStart(2, "0");
+        if (secondsEl) secondsEl.textContent = String(secs).padStart(2, "0");
+      }, 1000);
+    }
+  </script>
+</body>
+</html>

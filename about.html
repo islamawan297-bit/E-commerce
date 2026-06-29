@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Veloce Store</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        Veloce<span class="logo-dot"></span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="categories.html">Categories</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" class="action-btn"></button>
+        <a href="wishlist.html" class="action-btn">
+          <svg style="width:20px;height:20px;fill:currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/></svg>
+          <span class="badge wishlist-count-badge">0</span>
+        </a>
+        <a href="cart.html" class="action-btn">
+          <svg style="width:20px;height:20px;fill:currentColor" viewBox="0 0 20 20"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 100-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/></svg>
+          <span class="badge cart-count-badge">0</span>
+        </a>
+        <a href="login.html" id="auth-nav-user" class="action-btn">
+          <svg style="width:20px;height:20px;fill:currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Us Section -->
+  <section class="section-padding">
+    <div class="container" style="max-width:900px;">
+      <h1 style="font-size:2.8rem; margin-bottom:1.5rem; text-align:center;">Crafting High-Performance Luxury</h1>
+      <p style="font-size:1.2rem; line-height:1.8; color:var(--text-secondary); text-align:center; margin-bottom:4rem;">
+        Veloce was founded in 2026 with a singular, simple mandate: design workspace and lifestyle products that balance functional excellence with clean, premium aesthetics. Inspired by the minimalism of Apple and the performance of Nike.
+      </p>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; margin-bottom:4rem; align-items:center;">
+        <div>
+          <h2 style="font-size:1.8rem; margin-bottom:1rem;">Our Design Philosophy</h2>
+          <p style="color:var(--text-secondary); margin-bottom:1.5rem;">
+            We believe that the objects surrounding you should inspire focus. Every line, corner angle, and tactile feedback of Veloce devices is refined to reduce workspace clutter and maximize daily efficiency.
+          </p>
+          <p style="color:var(--text-secondary);">
+            By utilizing premium components (like double-shot PBT keycaps, professional-grade aluminum alloys, and top-grain cowhide leathers), we ensure our products do not just look stunning, but withstand years of heavy, continuous usage.
+          </p>
+        </div>
+        <div class="glass-card" style="padding:1rem; border-radius:var(--border-radius-lg); overflow:hidden;">
+          <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=500&q=80" alt="Minimal lamp" style="width:100%; border-radius:var(--border-radius-md);">
+        </div>
+      </div>
+
+      <div class="glass-card" style="padding:3rem; text-align:center; background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(147, 51, 234, 0.05));">
+        <h2 style="font-size:1.8rem; margin-bottom:1rem;">100% Carbon-Neutral Operations</h2>
+        <p style="color:var(--text-secondary); margin-bottom:2rem; max-width:600px; margin-left:auto; margin-right:auto;">
+          Design shouldn't come at the cost of the environment. Veloce guarantees fully recyclable paper-based packaging and carbon-offset express deliveries across all operations globally.
+        </p>
+        <a href="shop.html" class="btn btn-primary">Start Browsing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-bottom" style="text-align:center; justify-content:center;">
+      <span>&copy; 2026 Veloce Inc. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

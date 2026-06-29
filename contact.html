@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Veloce Store</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        Veloce<span class="logo-dot"></span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="categories.html">Categories</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" class="action-btn"></button>
+        <a href="wishlist.html" class="action-btn">
+          <svg style="width:20px;height:20px;fill:currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/></svg>
+          <span class="badge wishlist-count-badge">0</span>
+        </a>
+        <a href="cart.html" class="action-btn">
+          <svg style="width:20px;height:20px;fill:currentColor" viewBox="0 0 20 20"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 100-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/></svg>
+          <span class="badge cart-count-badge">0</span>
+        </a>
+        <a href="login.html" id="auth-nav-user" class="action-btn">
+          <svg style="width:20px;height:20px;fill:currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contact Form -->
+  <section class="section-padding">
+    <div class="container" style="display:grid; grid-template-columns: 1fr 1.2fr; gap:4rem; align-items:start;">
+      
+      <!-- Contact Info Sidebar -->
+      <div>
+        <h1 style="font-size:2.5rem; margin-bottom:1rem;">Get In Touch</h1>
+        <p style="color:var(--text-secondary); margin-bottom:3rem; font-size:1.05rem;">Have questions regarding technical specifications, bulk orders, or custom color drops? Our luxury concierges are standing by.</p>
+        
+        <div style="display:flex; flex-direction:column; gap:2rem;">
+          <div class="glass-card" style="padding:1.5rem; display:flex; gap:1.2rem; align-items:center;">
+            <div style="width:45px; height:45px; border-radius:50%; background:var(--bg-tertiary); display:flex; align-items:center; justify-content:center; color:var(--primary-color);">
+              <svg style="width:20px;height:20px" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </div>
+            <div>
+              <span style="font-size:0.8rem; color:var(--text-muted); text-transform:uppercase; font-weight:700;">Email Us</span>
+              <p style="font-weight:600;">islamawan297@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="glass-card" style="padding:1.5rem; display:flex; gap:1.2rem; align-items:center;">
+            <div style="width:45px; height:45px; border-radius:50%; background:var(--bg-tertiary); display:flex; align-items:center; justify-content:center; color:var(--primary-color);">
+              <svg style="width:20px;height:20px" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </div>
+            <div>
+              <span style="font-size:0.8rem; color:var(--text-muted); text-transform:uppercase; font-weight:700;">Call Us</span>
+              <p style="font-weight:600;">03261168819</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact input form -->
+      <div class="glass-card" style="padding:3rem;">
+        <h2 style="font-size:1.6rem; margin-bottom:1.5rem;">Send a Message</h2>
+        <form action="https://formspree.io/f/xgojzknz" method="POST" style="display:flex; flex-direction:column; gap:1.2rem;">
+          <div>
+            <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:0.5rem;">Full Name</label>
+            <input type="text" name="name" required placeholder="John Doe" style="width:100%; padding:0.75rem 1rem; border-radius:var(--border-radius-sm); border:1px solid var(--border-color); background:var(--bg-primary); color:var(--text-primary);">
+          </div>
+          <div>
+            <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:0.5rem;">Email Address</label>
+            <input type="email" name="email" required placeholder="john@doe.com" style="width:100%; padding:0.75rem 1rem; border-radius:var(--border-radius-sm); border:1px solid var(--border-color); background:var(--bg-primary); color:var(--text-primary);">
+          </div>
+          <div>
+            <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:0.5rem;">Message Context</label>
+            <textarea name="message" required rows="4" placeholder="How can our designer support team assist you?" style="width:100%; padding:0.75rem 1rem; border-radius:var(--border-radius-sm); border:1px solid var(--border-color); background:var(--bg-primary); color:var(--text-primary); resize:none;"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="align-self:flex-start; padding:0.8rem 2rem;">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-bottom" style="text-align:center; justify-content:center;">
+      <span>&copy; 2026 Veloce Inc. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

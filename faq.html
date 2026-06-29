@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ Helpdesk | Veloce Store</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .faq-item {
+      border-bottom: 1px solid var(--border-color);
+      padding: 1.5rem 0;
+    }
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 0;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 150px;
+      margin-top: 0.8rem;
+    }
+    .faq-toggle-icon {
+      transition: transform 0.3s ease;
+      font-size: 1.4rem;
+    }
+    .faq-item.open .faq-toggle-icon {
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        Veloce<span class="logo-dot"></span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="categories.html">Categories</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" class="action-btn"></button>
+        <a href="wishlist.html" class="action-btn">
+          <svg style="width:20px;height:20px;fill:currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/></svg>
+          <span class="badge wishlist-count-badge">0</span>
+        </a>
+        <a href="cart.html" class="action-btn">
+          <svg style="width:20px;height:20px;fill:currentColor" viewBox="0 0 20 20"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 100-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/></svg>
+          <span class="badge cart-count-badge">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- FAQ Section -->
+  <section class="section-padding">
+    <div class="container" style="max-width:800px;">
+      <h1 style="font-size:2.5rem; text-align:center; margin-bottom:1rem;">Frequently Asked Questions</h1>
+      <p style="color:var(--text-secondary); text-align:center; margin-bottom:4rem;">Find instant answers to inquiries regarding ordering, delivery, and warranty support.</p>
+
+      <div class="glass-card" style="padding:2.5rem;">
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>What is your typical shipping timeline?</span>
+            <span class="faq-toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            All orders placed before 2:00 PM EST ship same-day. Domestic express shipping takes 1-3 business days, while standard global shipping takes 5-10 business days.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Can I return or exchange a product?</span>
+            <span class="faq-toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Yes, we provide 30-day hassle-free returns on all products in original packaging. Return shipping labels can be processed directly via your account panel.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Do your items include structural warranty?</span>
+            <span class="faq-toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Absolutely. Every Veloce item carries a 2-Year Limited Structural and Technical Warranty covering internal hardware errors or fabrication defaults.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>How do I contact customer support?</span>
+            <span class="faq-toggle-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Please submit a ticket through our contact form, or email us directly at islamawan297@gmail.com. Our concierge desk is online 24/7.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-bottom" style="text-align:center; justify-content:center;">
+      <span>&copy; 2026 Veloce Inc. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth.js"></script>
+  
+  <script>
+    function toggleFaq(element) {
+      const item = element.parentElement;
+      item.classList.toggle("open");
+    }
+  </script>
+</body>
+</html>
